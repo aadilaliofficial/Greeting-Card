@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card card1">
+            <video src="vid.mp4" autoplay muted loop> </video>
+            <div>
+                <label for="">To</label>
+                <input onkeyup="getValue(this,0)" type="text" name="" id="">
+            </div>
+            <div>
+                <label for="">Message</label>
+                <textarea onkeyup="getValue(this,1)" name="" id=""></textarea>
+            </div>
+            <div>
+                <label for="">From</label>
+                <input onkeyup="getValue(this,2)" type="text" name="" id="">
+            </div>
+            <div>
+                <label for="">Paste Background Image Link</label>
+                <input onchange="bgimg(this)" type="text">
+            </div>
+            <div>
+                <label for="">Select Text Color</label>
+                <input type="color" onchange="tcolor(this.value)">
+            </div>
+        </div>
+
+        <div class="card card2">
+            <h1 class="output">From :</h1>
+            <p class="output">Message :</p>
+            <h1 class="output">To :</h1>
+            <button id="print" onclick="print()">Print Card</button>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="app.js"></script>
+</body>
+</html>
